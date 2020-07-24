@@ -1,0 +1,37 @@
+/* On va manipuler des grandes images, dans des blocs
+pour éviter qu'elles débordent et faire en sorte qu'elles s'adaptent au design : */
+img {
+  max-width: 100%;
+}
+
+/* toutes les images sont positionnées au même endroit dans le carousel et masquées au départ */
+#carousel {
+  width: 800px;
+  margin: 50px auto;
+  position: relative;
+}
+
+#carousel img {
+  max-width: 100%;
+  display: none;
+  position: absolute;
+}
+
+/* sauf celle qui est active
+"active" représente un état de nos images
+utiliser une classe */
+#carousel img.active {
+  display: block;
+}
+
+
+/* calculer la priorité d'un sélecteur
+3 chiffres :
+- le nb d'id dans le sélecteur
+- le nb de classes, pseudoclasses (:hover) ds le sélecteur
+- le nombre de noms de balises
+
+#carousel img : 101
+img.active : 011
+#carousel img.active : 111
+*/
